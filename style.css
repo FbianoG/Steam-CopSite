@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {}
+
+header {
+    padding: 13px 8px;
+    background: #171a21;
+    box-shadow: 0px 0px 7px black;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 62px;
+}
+
+header .logo {
+    margin: 0 auto;
+    width: 150px;
+    height: 40px;
+    overflow: hidden;
+}
+
+header .logo img {
+    height: 100%;
+    width: 90%;
+    /* object-fit: cover; */
+}
+
+header .menu {
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    position: absolute;
+}
+
+header .menu span {
+    background: #f4f5f9;
+    width: 30px;
+    height: 5px;
+    border-radius: 3px;
+}
+
+.apresentation {
+    width: 100%;
+    position: relative;
+    margin-top: 62px;
+}
+
+.apresentation video {
+    cursor: pointer;
+    width: 100%;
+}
+
+.apresentation .search-bar {
+    position: absolute;
+    top: 20px;
+    width: 940px;
+    height: 35px;
+    background: linear-gradient(to right, #505d94, #0f216e);
+    display: flex;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    justify-content: space-between;
+}
+
+.apresentation .search-bar nav {
+    display: flex;
+    height: 100%;
+}
+
+.apresentation .search-bar a {
+    height: 100%;
+    text-decoration: none;
+    color: #e5e5e5;
+    font-weight: 500;
+    font-size: 13px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apresentation .search-bar a:hover {
+    background: linear-gradient(to right, #2d6ba6, transparent);
+}
+
+.apresentation .search-bar .input-search-bar {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background: #316282;
+    border: 1px solid #1e2128;
+    border-radius: 3px;
+    margin: 0 5px;
+    justify-self: flex-end;
+}
+
+.apresentation .search-bar .input-search-bar:hover {
+    border: 1px solid #58a8d6;
+}
+
+.apresentation .search-bar .input-search-bar input {
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 0 0 0 15px;
+    color: #f4f5f9;
+
+}
+
+.apresentation .search-bar .input-search-bar input::placeholder {
+    color: #1e2128;
+}
+
+
+.apresentation .search-bar .input-search-bar i {
+    width: 25px;
+    height: 25px;
+    background: #629fc3;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #606060;
+}
+
+.apresentation .search-bar .input-search-bar i:hover {
+    background: #58a8d6;
+}
+
+/* MENU LATERAL */
+.side-menu {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.side-menu .legend-menu-top-image {
+    
+}
+
+.side-menu .menu-top-image {
+    width: 100%;
+    height: 65px;
+}
+.side-menu .menu-top-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.side-menu h3 {
+    color: #536f86;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.side-menu p {
+    font-size: 12px;
+    color: #7a8b9d;
+    font-weight: 550;
+    line-height: 16px;
+    margin: 2px 0;
+    width: fit-content;
+}
+
+.side-menu p:hover {
+    color: #66b0ee;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.recomends {
+    background: #192a3e;
+}
+
+.recomends .main {
+    width: 80%;
+    height: 1000px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    column-gap: 40px;
+}
+
+
+
+.recomends .main .destaques {
+    max-width: 970px;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    display: inline-block;
+}
+
+.recomends .main .destaques .section-title {
+    font-size: 14px;
+    color: #f4f5f9;
+    left: 2px;
+    padding: 25px 0 10px;
+    font-weight: normal;
+}
+
+.recomends .main .destaques .recomendados {
+    display: flex;
+    background: #061018;
+    color: #f4f5f9;
+    height: 355px;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #100100;
+}
+
+.recomends .main .destaques .recomendados-image {
+    height: 100%;
+    min-width: 620px;
+
+}
+
+.recomends .main .destaques .recomendados-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recomends .main .destaques .recomendados .recomendados-data {
+    width: 100%;
+    border: 1px solid #202020;
+    border-left: none;
+}
+
+.recomends .main .destaques .recomendados .recomendados-data h2 {
+    padding: 30px 20px;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+.recomends .main .destaques .recomendados .recomendados-data .mini-image {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: 160px 160px;
+    grid-template-rows: 70px 70px;
+    gap: 10px;
+}
+
+.recomends .main .destaques .recomendados .recomendados-data .mini-image img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+}
+
+.recomends .main .destaques .recomendados .recomendados-data .mini-image img:hover {
+    filter: brightness(100%);
+}
+
+
+.recomends .main .destaques .recomendados .recomendados-data .labels {
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+.recomends .main .destaques .recomendados .recomendados-data .labels p {
+    font-size: 22px;
+}
+
+.recomends .main .destaques .recomendados .recomendados-data .labels label {
+    background: #384047;
+    border-radius: 3px;
+    padding: 3px 7px;
+    font-size: 13px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.recomends .main .destaques .recomendados .recomendados-data .recomendados-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.recomends .main .destaques .recomendados .recomendados-data .recomendados-price p {
+    font-size: 12px;
+}
+
+.recomends .main .destaques .recomendados .recomendados-data .recomendados-price i {
+    color: #999;
+    font-size: 18px;
+}
+
+
+
+
+.promocoes {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.promocoes .card-promo {
+    height: 400px;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px #000000;
+}
+
+.promocoes .card-promo .card-img {
+    width: 100%;
+    height: calc(100% - 115px);
+    overflow: hidden;
+}
+
+.promocoes .card-promo .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.promocoes .card-promo .legends {
+    width: 100%;
+    height: 115px;
+    background: #1a5c7f;
+    background-image: url('https://store.akamai.steamstatic.com/public/images/v6/home/background_spotlight.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.promocoes .card-promo .legends h3 {
+    color: #f4f5f9;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.promocoes .card-promo .legends p {
+    font-size: 13px;
+    color: #bbb;
+}
+
+.promocoes .card-promo .legends .promo,
+.mini-card-promo .promo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+}
+
+.promocoes .card-promo .legends .promo p,
+.mini-card-promo .promo p {
+    color: #7dd512;
+    font-size: 26px;
+    background: #4c6b22;
+    line-height: 35px;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.promocoes .card-promo .legends .promo .price,
+.mini-card-promo .promo .price {
+    background: #344454;
+    height: 100%;
+}
+
+.promocoes .card-promo .legends .promo .price p,
+.mini-card-promo .promo .price p {
+    color: #606668;
+    background: none;
+    font-size: 12px;
+    width: 80px;
+    height: 17px;
+    padding: 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 3px;
+
+}
+
+.promocoes .card-promo .legends .promo .price .price-old,
+.mini-card-promo .promo .price .price-old {
+    text-decoration: line-through;
+}
+
+
+.promocoes .card-promo .legends .promo .price .price-end,
+.mini-card-promo .promo .price .price-end {
+    color: #7dd512;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.promocoes .card-span {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.promocoes .card-span .mini-card-promo {
+    box-shadow: 0 0 5px #000000;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+.promocoes .card-span .mini-card-promo .mini-img {
+    width: 100%;
+    height: calc(100% - 45px);
+    background-image: url("https://files.meiobit.com/wp-content/uploads/2023/01/squad.jpg");
+    background-size: cover;
+}
+
+.promocoes .card-span .mini-card-promo .legends {
+    height: 45px;
+    background: #b8e0f6;
+}
+
+.mini-card-promo .legends {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.mini-card-promo .legends .text{
+    font-size: 15px;
+    color: #283846;
+}
