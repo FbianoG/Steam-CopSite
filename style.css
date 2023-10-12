@@ -53,6 +53,66 @@ header .menu span {
     border-radius: 3px;
 }
 
+.slide {
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(to left, transparent, #213c57, transparent);
+    position: relative;
+}
+
+.slide-btn {
+    background: #0c161f;
+    width: 45px;
+    height: 110px;
+    position: absolute;
+    color: #f4f5f9;
+    font-size: 40px;
+}
+
+.slide i {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-btn:hover {
+    background: #3a4e5d;
+}
+
+.back {
+    left: -46px;
+    top: -230px;
+}
+
+.next {
+    right: -46px;
+    top: -230px;
+}
+
+.slide .count-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.slide .count-main span {
+    width: 20px;
+    height: 10px; 
+    border-radius: 3px;  
+    background: #707070;
+}
+
+.slide .count-main span:hover {
+    background: #999;
+}
+
+/* SECTION APRESENTATION */
+
 .apresentation {
     width: 100%;
     position: relative;
@@ -62,6 +122,8 @@ header .menu span {
 .apresentation video {
     cursor: pointer;
     width: 100%;
+    max-height: 470px;
+    object-fit: cover;
 }
 
 .apresentation .search-bar {
@@ -83,7 +145,7 @@ header .menu span {
     height: 100%;
 }
 
-.apresentation .search-bar a {
+.search-bar a {
     height: 100%;
     text-decoration: none;
     color: #e5e5e5;
@@ -96,11 +158,11 @@ header .menu span {
     align-items: center;
 }
 
-.apresentation .search-bar a:hover {
+.search-bar a:hover {
     background: linear-gradient(to right, #2d6ba6, transparent);
 }
 
-.apresentation .search-bar .input-search-bar {
+.search-bar .input-search-bar {
     height: 30px;
     display: flex;
     align-items: center;
@@ -111,11 +173,11 @@ header .menu span {
     justify-self: flex-end;
 }
 
-.apresentation .search-bar .input-search-bar:hover {
+.search-bar .input-search-bar:hover {
     border: 1px solid #58a8d6;
 }
 
-.apresentation .search-bar .input-search-bar input {
+.search-bar .input-search-bar input {
     background: transparent;
     outline: none;
     border: none;
@@ -124,12 +186,12 @@ header .menu span {
 
 }
 
-.apresentation .search-bar .input-search-bar input::placeholder {
+.search-bar .input-search-bar input::placeholder {
     color: #1e2128;
 }
 
 
-.apresentation .search-bar .input-search-bar i {
+.search-bar .input-search-bar i {
     width: 25px;
     height: 25px;
     background: #629fc3;
@@ -140,9 +202,14 @@ header .menu span {
     color: #606060;
 }
 
-.apresentation .search-bar .input-search-bar i:hover {
+.search-bar .input-search-bar i:hover {
     background: #58a8d6;
 }
+
+
+
+
+
 
 /* MENU LATERAL */
 .side-menu {
@@ -154,14 +221,13 @@ header .menu span {
     padding-top: 20px;
 }
 
-.side-menu .legend-menu-top-image {
-    
-}
+.side-menu .legend-menu-top-image {}
 
 .side-menu .menu-top-image {
     width: 100%;
     height: 65px;
 }
+
 .side-menu .menu-top-image img {
     width: 100%;
     height: 100%;
@@ -460,7 +526,7 @@ header .menu span {
     padding: 0 10px;
 }
 
-.mini-card-promo .legends .text{
+.mini-card-promo .legends .text {
     font-size: 15px;
     color: #283846;
 }
