@@ -1,20 +1,20 @@
-let apresentation = "https://cdn.akamai.steamstatic.com/steam/clusters/frontpage/b9470f369c925f8d28e3baeb/webm_page_bg_portuguese.webm?t=1696637517"
+let apresentation = "https://cdn.akamai.steamstatic.com/steam/clusters/frontpage/b9470f369c925f8d28e3baeb/webm_page_bg_portuguese.webm?t=1696637517" //video de apresentação
 
 let games = [
     {
-        name: "overwatch 2",
-        price: 60,
-        main: true,
+        name: "overwatch 2", //nome do jogo
+        price: 60, //preço real do jogo
+        main: true, //diz se o jogo está em destaque
         promo: {
-            type: true,
-            value: 10,
+            type: false, //diz se o jogo está em promoção
+            value: 10, //porcentagem do desconto da promoção
         },
         images: {
-            src1: "https://news.xbox.com/en-us/wp-content/uploads/sites/2/2022/10/OW2-be9287b234afbe7898ac.jpg",
-            src2: "https://assets1.ignimgs.com/2019/09/06/nintendoswitch-overwatchlegendaryedition-screenshot05-1567796447891.png",
-            src3: "https://www.gamersegames.com.br/wp-content/uploads/2023/05/Overwatch-2-Mes-do-Orgulho-2023-1.jpg",
-            src4: "https://i.ytimg.com/vi/O161-WNZBP4/maxresdefault.jpg",
-            src5: "https://acmi-website-media-prod.s3.ap-southeast-2.amazonaws.com/media/images/overwatch-characters-short-stories-ACMI.original.jpg",
+            src1: "https://news.xbox.com/en-us/wp-content/uploads/sites/2/2022/10/OW2-be9287b234afbe7898ac.jpg", //imagem principal do jogo
+            src2: "https://assets1.ignimgs.com/2019/09/06/nintendoswitch-overwatchlegendaryedition-screenshot05-1567796447891.png", //imagem secundária do jogo
+            src3: "https://www.gamersegames.com.br/wp-content/uploads/2023/05/Overwatch-2-Mes-do-Orgulho-2023-1.jpg", //imagem secundária do jogo
+            src4: "https://i.ytimg.com/vi/O161-WNZBP4/maxresdefault.jpg", //imagem secundária do jogo
+            src5: "https://acmi-website-media-prod.s3.ap-southeast-2.amazonaws.com/media/images/overwatch-characters-short-stories-ACMI.original.jpg", //imagem secundária do jogo
         }
     },
     {
@@ -23,7 +23,7 @@ let games = [
         main: true,
         promo: {
             type: true,
-            value: 20,
+            value: 25,
         },
         images: {
             src1: "https://t2.tudocdn.net/671739?w=1920",
@@ -38,7 +38,7 @@ let games = [
         price: 79,
         main: true,
         promo: {
-            type: true,
+            type: false,
             value: 65,
         },
         images: {
@@ -51,28 +51,24 @@ let games = [
     },
 ]
 
-//Variáveis dos elementos
+//Variáveis
 let videoApresentation = document.querySelectorAll('.apresentation video')[0]
-// console.log(apresentation);
-
-let mainImg = document.querySelectorAll('.recommended img')
+let mainImg = document.querySelectorAll('.recommended img') 
 let recommended = document.querySelectorAll('.recommended')[0]
 let nextBtn = document.querySelectorAll('.next')[0]
 let backBtn = document.querySelectorAll('.back')[0]
-
-
-let slideCount = 0
+let slideCount = 0 //variável para manipular rolagem das imagens em destaque e os "spans"
 
 //Eventos 
 
-nextBtn.addEventListener('click', slideNext)
-backBtn.addEventListener('click', slideBack)
+nextBtn.addEventListener('click', slideNext) //evento para passar o jogo em destaque
+backBtn.addEventListener('click', slideBack) //evento para voltar o jogo em destaque
 
 
 
 
 //Functions
-function slideNext() {
+function slideNext() { //function para passar o jogo em destaque
     let cardsMain = document.querySelectorAll('.card-recommended')
     let spanCount = document.querySelectorAll('.count-main span')
     slideCount += 1
@@ -90,7 +86,7 @@ function slideNext() {
     }
 }
 
-function slideBack() {
+function slideBack() { //function para voltar o jogo em destaque
     let cardsMain = document.querySelectorAll('.card-recommended')
     let spanCount = document.querySelectorAll('.count-main span')
     slideCount -= 1
@@ -109,12 +105,12 @@ function slideBack() {
 }
 
 function createData() {
-    videoApresentation.src = `${apresentation}`
+    videoApresentation.src = `${apresentation}` //manipular vídeo de apresentação
 
-    let gamesMain = games.filter(element =>{
+    let gamesMain = games.filter(element =>{ //filtra  [{games]} e retorna todos os jogos que {"main:" "true"}
         return element.main == true
     })
-    gamesMain.forEach(element => {
+    gamesMain.forEach(element => { //cria dinamicamente os elementos do [{gamesMain]}
         let newSpanCount = document.createElement('span')
         document.querySelectorAll('.count-main')[0].appendChild(newSpanCount)
         let newCard = document.createElement('div')
@@ -136,7 +132,7 @@ function createData() {
                     <label>Popular</label>
                 </div>
                 <div class="recommended-price">
-                ${element.promo.type == true && element.promo.value > 0 ? 
+                ${element.promo.type == true && element.promo.value > 0 ? //operador ternário para verificar se o jogo está ou não em promoção
                     `
                     <div class="promo">
                         <p id="promoPerc">${element.promo.value}%</p>
@@ -160,9 +156,10 @@ function createData() {
 
     let cardsMain = document.querySelectorAll('.card-recommended')
     let spanCount = document.querySelectorAll('.count-main span')
-    cardsMain[slideCount].style.display = 'flex'
-    spanCount[slideCount].style.background = "#999"
+    cardsMain[slideCount].style.display = 'flex' //display=none nos jogos subsequente ao index "slideCount"
+    spanCount[slideCount].style.background = "#999" //muda background do "span[0]"
 
 }
 
-createData()
+//Chamados
+createData() //chama a função para filtrar e criar dinamicamente os elementos
