@@ -56,70 +56,8 @@ header .menu span {
 }
 
 
-.slide {
-    width: 100%;
-    height: 45px;
-    background: linear-gradient(to left, transparent, #213c57, transparent);
-    position: relative;
-}
-
-.slide-btn {
-    background: #0c161f;
-    width: 45px;
-    height: 110px;
-    border: none;
-    position: absolute;
-    color: #f4f5f9;
-    font-size: 40px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slide-btn:hover {
-    background: #3a4e5d;
-}
-
-.back {
-    left: -46px;
-    top: -230px;
-}
-
-.next {
-    right: -46px;
-    top: -230px;
-}
-
-.slide .count-main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-.slide .count-main span {
-    width: 20px;
-    height: 10px;
-    border-radius: 3px;
-    background: #707070;
-    cursor: pointer;
-}
-
-.slide .count-main span:hover {
-    background: #999;
-}
-
-
-
-
-
-
 
 /* SECTION APRESENTATION */
-
 .apresentation {
     width: 100%;
     position: relative;
@@ -217,6 +155,24 @@ header .menu span {
 
 
 
+/* MAIN */
+main {
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    padding: 30px 0 0 0;
+}
+
+/* CONTEURO */
+.content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    margin-bottom: 50px;
+}
 
 
 /* MENU LATERAL */
@@ -226,23 +182,21 @@ header .menu span {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-top: 20px;
+    justify-self: flex-end;
 }
 
 .side-menu .legend-menu-top-image {}
 
-.side-menu .menu-top-image {
+.menu-image {
     width: 100%;
     height: 65px;
 }
 
-.side-menu .menu-top-image img {
+.menu-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-
 
 .side-menu h3 {
     color: #536f86;
@@ -266,82 +220,123 @@ header .menu span {
 
 
 
+/* SLIDER DO HIGHLIGHTS */
+.highlights-slide {
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(to left, transparent, #213c57, transparent);
+    position: relative;
+    z-index: 1;
+}
 
-
-
-
-
-
-
-
-main {
-    width: 80%;
-    width: 1240px;
-    margin: 0 auto;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.highlights-slide-btn {
+    background: #0c161f;
+    width: 45px;
+    height: 110px;
+    border: none;
+    position: absolute;
+    color: #f4f5f9;
+    font-size: 40px;
+    cursor: pointer;
     display: flex;
-    justify-content: left;
-    /* column-gap: 40px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.highlights-slide-btn:hover {
+    background: #3a4e5d;
+}
+
+.back {
+    left: -46px;
+    top: -230px;
+}
+
+.next {
+    right: -46px;
+    top: -230px;
+}
+
+.highlights-slide-count {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.highlights-slide-count span {
+    width: 20px;
+    height: 10px;
+    border-radius: 3px;
+    background: #707070;
+    cursor: pointer;
+}
+
+.highlights-slide-count span:hover {
+    background: #999;
 }
 
 
 
-.highlights, .promotion {
-    width: 970px;
-    /* border: 1px solid yellow; */
-}
-
-section .section-title {
+/* SECTIONS */
+.section-title {
     font-size: 14px;
     color: #f4f5f9;
     left: 2px;
-    padding: 25px 0 10px;
+    padding: 0 0 10px;
     font-weight: normal;
 }
 
-.highlights .recommended,
-.promotion .promocoes {
-    height: 355px;
-    width: 100%;
+.content-highlights,
+.content-promotion {
+    width: 970px;
+    display: flex;
+    flex-direction: column;
 }
 
-.card-recommended {
-    display: flex;
+.highlights-list {
+    width: 100%;
+    height: 365px;
+    box-shadow: 0 0 10px #100100;
+    z-index: 2;
+}
+
+.highlights-card {
     background: #061018;
     color: #f4f5f9;
     height: 100%;
     width: 100%;
     cursor: pointer;
-    box-shadow: 0 0 10px #100100;
     display: none;
 }
 
-.highlights .recommended-image {
+.highlights-card-image {
     height: 100%;
     min-width: 620px;
-
 }
 
-.highlights .recommended-image img {
+.highlights-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.highlights .recommended .recommended-data {
+.highlights-card-data {
     width: 100%;
     border: 1px solid #202020;
     border-left: none;
 }
 
-.highlights .recommended .recommended-data h2 {
+.highlights-card-data h2 {
     padding: 20px;
     font-weight: 200;
     font-size: 25px;
     text-transform: capitalize;
 }
 
-.highlights .recommended .recommended-data .mini-image {
+.highlights-card-data-images {
     display: grid;
     justify-content: center;
     width: 100%;
@@ -350,27 +345,26 @@ section .section-title {
     gap: 10px;
 }
 
-.highlights .recommended .recommended-data .mini-image img {
+.highlights-card-data-images img {
     width: 100%;
     height: 100%;
     filter: brightness(70%);
 }
 
-.highlights .recommended .recommended-data .mini-image img:hover {
+.highlights-card-data-images img:hover {
     filter: brightness(100%);
 }
 
-
-.highlights .recommended .recommended-data .labels {
+.highlights-card-data-labels {
     padding: 10px 20px;
     margin-bottom: 15px;
 }
 
-.highlights .recommended .recommended-data .labels p {
+.highlights-card-data-labels p {
     font-size: 22px;
 }
 
-.highlights .recommended .recommended-data .labels label {
+.highlights-card-data-labels label {
     background: #384047;
     border-radius: 3px;
     padding: 3px 7px;
@@ -379,7 +373,7 @@ section .section-title {
     display: inline-block;
 }
 
-.highlights .recommended .recommended-data .recommended-price {
+.highlights-card-data-price {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -387,11 +381,11 @@ section .section-title {
     height: 35px;
 }
 
-.highlights .recommended .recommended-data .recommended-price p {
+.highlights-card-data-price p {
     font-size: 12px;
 }
 
-.highlights .recommended .recommended-data .recommended-price i {
+.highlights-card-data-price i {
     color: #999;
     font-size: 18px;
 }
@@ -399,14 +393,14 @@ section .section-title {
 
 
 
-.promocoes {
+.promotion-list {
     /* border: 1px solid red; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
 }
 
-.promocoes .card-promo {
+.promotion-list .promotion-card {
     height: 400px;
     /* border: 1px solid black; */
     overflow: hidden;
@@ -415,23 +409,22 @@ section .section-title {
     box-shadow: 0 0 5px #000000;
 }
 
-.promocoes .card-promo .card-img {
+.promotion-card-image {
     width: 100%;
     height: calc(100% - 115px);
     overflow: hidden;
 }
 
-.promocoes .card-promo .card-img img {
+.promotion-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     cursor: pointer;
 }
 
-.promocoes .card-promo .legends {
+.promotion-card-legends {
     width: 100%;
     height: 115px;
-    background: #1a5c7f;
     background-image: url('https://store.akamai.steamstatic.com/public/images/v6/home/background_spotlight.jpg');
     background-size: cover;
     display: flex;
@@ -440,27 +433,28 @@ section .section-title {
     padding: 10px;
 }
 
-.promocoes .card-promo .legends h3 {
+.promotion-card-legends h3 {
     color: #f4f5f9;
     font-weight: normal;
     font-size: 15px;
 }
 
-.promocoes .card-promo .legends p {
+.promotion-card-legends p {
     font-size: 13px;
     color: #bbb;
 }
 
-.promocoes .card-promo .legends .promo,
-.mini-card-promo .promo, .promo {
+.highlights-card-data-price-promo,
+.promotion-card-promo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 35px;
 }
 
-.promocoes .card-promo .legends .promo p,
-.mini-card-promo .promo p, #promoPerc {
+.highlights-card-data-price-promo p,
+.promotion-card-promo p,
+#promoPerc {
     color: #7dd512;
     font-size: 26px;
     background: #4c6b22;
@@ -472,14 +466,15 @@ section .section-title {
     justify-content: center;
 }
 
-.promocoes .card-promo .legends .promo .price,
-.mini-card-promo .promo .price {
+.highlights-card-data-price-promo-price,
+.promotion-card-promo-price {
     background: #344454;
     height: 100%;
 }
 
-.promocoes .card-promo .legends .promo .price p,
-.mini-card-promo .promo .price p, .price p {
+.highlights-card-data-price-promo-price p,
+.promotion-card-promo-price p,
+.price p {
     color: #606668;
     background: none;
     font-size: 12px;
@@ -494,27 +489,37 @@ section .section-title {
 
 }
 
-.promocoes .card-promo .legends .promo .price .price-old,
-.mini-card-promo .promo .price .price-old, .price-old {
+.highlights-card-data-price-promo-price .price-old,
+.promotion-card-promo-price .price-old,
+.price-old {
     text-decoration: line-through;
 }
 
 
-.promocoes .card-promo .legends .promo .price .price-end,
-.mini-card-promo .promo .price .price-end, #price-end {
+.highlights-card-data-price-promo-price .price-end,
+.promotion-card-promo-price .price-end,
+#price-end {
     color: #7dd512;
     font-size: 16px;
     font-weight: normal;
 }
 
-.promocoes .card-span {
+
+
+
+
+
+
+
+
+.promotion-mini-list {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 15px;
     text-decoration: none;
 }
 
-.promocoes .card-span .mini-card-promo {
+.promotion-mini-card {
     box-shadow: 0 0 5px #000000;
     display: flex;
     flex-direction: column;
@@ -523,50 +528,28 @@ section .section-title {
 
 }
 
-.promocoes .card-span .mini-card-promo .mini-img {
+.promotion-mini-card-image {
     width: 100%;
     height: calc(100% - 45px);
     background-image: url("https://files.meiobit.com/wp-content/uploads/2023/01/squad.jpg");
     background-size: cover;
 }
 
-.promocoes .card-span .mini-card-promo .legends {
+.promotion-mini-card-legends {
     height: 45px;
     background: #b8e0f6;
-}
-
-.mini-card-promo .legends {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
 }
 
-.mini-card-promo .legends .text {
+
+.promotion-mini-card-legends-text .text {
     font-size: 15px;
     color: #283846;
 }
 
 
 
-@media screen and (max-width: 1500px) {
-    .side-menu {
-        display: none;
-    }
-
-    main {
-        width: 95%;
-        justify-content: center;
-    }
-}
-
-
-@media screen and (max-width: 1100px) {
-
-}
-
-@media screen and (max-width: 750px) {
-    .apresentation .search-bar {
-        display: none;
-    }
-}
+@media screen and (max-width: 1500px) {}
