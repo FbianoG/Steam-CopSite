@@ -5,7 +5,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {}
+body {
+    background: #192a3e;
+}
 
 header {
     padding: 13px 8px;
@@ -53,6 +55,7 @@ header .menu span {
     border-radius: 3px;
 }
 
+
 .slide {
     width: 100%;
     height: 45px;
@@ -64,14 +67,10 @@ header .menu span {
     background: #0c161f;
     width: 45px;
     height: 110px;
+    border: none;
     position: absolute;
     color: #f4f5f9;
     font-size: 40px;
-}
-
-.slide i {
-    height: 100%;
-    width: 100%;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -100,10 +99,11 @@ header .menu span {
     align-items: center;
     gap: 5px;
 }
+
 .slide .count-main span {
     width: 20px;
-    height: 10px; 
-    border-radius: 3px;  
+    height: 10px;
+    border-radius: 3px;
     background: #707070;
     cursor: pointer;
 }
@@ -111,6 +111,12 @@ header .menu span {
 .slide .count-main span:hover {
     background: #999;
 }
+
+
+
+
+
+
 
 /* SECTION APRESENTATION */
 
@@ -124,6 +130,7 @@ header .menu span {
     cursor: pointer;
     width: 100%;
     max-height: 470px;
+    min-height: 260px;
     object-fit: cover;
 }
 
@@ -266,29 +273,25 @@ header .menu span {
 
 
 
-.recomends {
-    background: #192a3e;
-}
 
-.recomends .main {
+main {
     width: 80%;
-    height: 1000px;
+    width: 1240px;
     margin: 0 auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
-    column-gap: 40px;
+    justify-content: left;
+    /* column-gap: 40px; */
 }
 
 
 
-.recomends .main .destaques {
-    max-width: 970px;
-    height: 100%;
+.highlights, .promotion {
+    width: 970px;
     /* border: 1px solid yellow; */
-    display: inline-block;
 }
 
-.recomends .main .destaques .section-title {
+section .section-title {
     font-size: 14px;
     color: #f4f5f9;
     left: 2px;
@@ -296,12 +299,13 @@ header .menu span {
     font-weight: normal;
 }
 
-.recomends .main .destaques .recomendados {
+.highlights .recommended,
+.promotion .promocoes {
     height: 355px;
     width: 100%;
 }
 
-.card-main {
+.card-recommended {
     display: flex;
     background: #061018;
     color: #f4f5f9;
@@ -312,32 +316,32 @@ header .menu span {
     display: none;
 }
 
-.recomends .main .destaques .recomendados-image {
+.highlights .recommended-image {
     height: 100%;
     min-width: 620px;
 
 }
 
-.recomends .main .destaques .recomendados-image img {
+.highlights .recommended-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.recomends .main .destaques .recomendados .recomendados-data {
+.highlights .recommended .recommended-data {
     width: 100%;
     border: 1px solid #202020;
     border-left: none;
 }
 
-.recomends .main .destaques .recomendados .recomendados-data h2 {
-    padding: 30px 20px;
+.highlights .recommended .recommended-data h2 {
+    padding: 20px;
     font-weight: 200;
     font-size: 25px;
     text-transform: capitalize;
 }
 
-.recomends .main .destaques .recomendados .recomendados-data .mini-image {
+.highlights .recommended .recommended-data .mini-image {
     display: grid;
     justify-content: center;
     width: 100%;
@@ -346,27 +350,27 @@ header .menu span {
     gap: 10px;
 }
 
-.recomends .main .destaques .recomendados .recomendados-data .mini-image img {
+.highlights .recommended .recommended-data .mini-image img {
     width: 100%;
     height: 100%;
     filter: brightness(70%);
 }
 
-.recomends .main .destaques .recomendados .recomendados-data .mini-image img:hover {
+.highlights .recommended .recommended-data .mini-image img:hover {
     filter: brightness(100%);
 }
 
 
-.recomends .main .destaques .recomendados .recomendados-data .labels {
+.highlights .recommended .recommended-data .labels {
     padding: 10px 20px;
     margin-bottom: 15px;
 }
 
-.recomends .main .destaques .recomendados .recomendados-data .labels p {
+.highlights .recommended .recommended-data .labels p {
     font-size: 22px;
 }
 
-.recomends .main .destaques .recomendados .recomendados-data .labels label {
+.highlights .recommended .recommended-data .labels label {
     background: #384047;
     border-radius: 3px;
     padding: 3px 7px;
@@ -375,18 +379,19 @@ header .menu span {
     display: inline-block;
 }
 
-.recomends .main .destaques .recomendados .recomendados-data .recomendados-price {
+.highlights .recommended .recommended-data .recommended-price {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding: 0 20px;
+    height: 35px;
 }
 
-.recomends .main .destaques .recomendados .recomendados-data .recomendados-price p {
+.highlights .recommended .recommended-data .recommended-price p {
     font-size: 12px;
 }
 
-.recomends .main .destaques .recomendados .recomendados-data .recomendados-price i {
+.highlights .recommended .recommended-data .recommended-price i {
     color: #999;
     font-size: 18px;
 }
@@ -447,7 +452,7 @@ header .menu span {
 }
 
 .promocoes .card-promo .legends .promo,
-.mini-card-promo .promo {
+.mini-card-promo .promo, .promo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -455,13 +460,16 @@ header .menu span {
 }
 
 .promocoes .card-promo .legends .promo p,
-.mini-card-promo .promo p {
+.mini-card-promo .promo p, #promoPerc {
     color: #7dd512;
     font-size: 26px;
     background: #4c6b22;
-    line-height: 35px;
+    height: 35px;
     padding: 0 5px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .promocoes .card-promo .legends .promo .price,
@@ -471,7 +479,7 @@ header .menu span {
 }
 
 .promocoes .card-promo .legends .promo .price p,
-.mini-card-promo .promo .price p {
+.mini-card-promo .promo .price p, .price p {
     color: #606668;
     background: none;
     font-size: 12px;
@@ -487,13 +495,13 @@ header .menu span {
 }
 
 .promocoes .card-promo .legends .promo .price .price-old,
-.mini-card-promo .promo .price .price-old {
+.mini-card-promo .promo .price .price-old, .price-old {
     text-decoration: line-through;
 }
 
 
 .promocoes .card-promo .legends .promo .price .price-end,
-.mini-card-promo .promo .price .price-end {
+.mini-card-promo .promo .price .price-end, #price-end {
     color: #7dd512;
     font-size: 16px;
     font-weight: normal;
@@ -537,4 +545,28 @@ header .menu span {
 .mini-card-promo .legends .text {
     font-size: 15px;
     color: #283846;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    .side-menu {
+        display: none;
+    }
+
+    main {
+        width: 95%;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 750px) {
+    .apresentation .search-bar {
+        display: none;
+    }
 }

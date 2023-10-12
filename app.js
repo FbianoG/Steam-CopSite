@@ -6,8 +6,8 @@ let games = [
         price: 60,
         main: true,
         promo: {
-            type: false,
-            value: "",
+            type: true,
+            value: 10,
         },
         images: {
             src1: "https://news.xbox.com/en-us/wp-content/uploads/sites/2/2022/10/OW2-be9287b234afbe7898ac.jpg",
@@ -22,8 +22,8 @@ let games = [
         price: 199,
         main: true,
         promo: {
-            type: false,
-            value: "",
+            type: true,
+            value: 20,
         },
         images: {
             src1: "https://t2.tudocdn.net/671739?w=1920",
@@ -38,8 +38,8 @@ let games = [
         price: 79,
         main: true,
         promo: {
-            type: false,
-            value: "",
+            type: true,
+            value: 65,
         },
         images: {
             src1: "https://images.ctfassets.net/j95d1p8hsuun/29peK2k7Ic6FsPAVjHWs8W/06d3add40b23b20bbff215f6979267e8/NW_OPENGRAPH_1200x630.jpg",
@@ -55,8 +55,8 @@ let games = [
 let videoApresentation = document.querySelectorAll('.apresentation video')[0]
 // console.log(apresentation);
 
-let mainImg = document.querySelectorAll('.recomendados img')
-let main = document.querySelectorAll('.recomendados')[0]
+let mainImg = document.querySelectorAll('.recommended img')
+let main = document.querySelectorAll('.recommended')[0]
 let nextBtn = document.querySelectorAll('.next')[0]
 let backBtn = document.querySelectorAll('.back')[0]
 
@@ -73,7 +73,7 @@ backBtn.addEventListener('click', slideBack)
 
 //Functions
 function slideNext() {
-    let cardsMain = document.querySelectorAll('.card-main')
+    let cardsMain = document.querySelectorAll('.card-recommended')
     let spanCount = document.querySelectorAll('.count-main span')
     slideCount += 1
     if (slideCount == cardsMain.length) {
@@ -91,7 +91,7 @@ function slideNext() {
 }
 
 function slideBack() {
-    let cardsMain = document.querySelectorAll('.card-main')
+    let cardsMain = document.querySelectorAll('.card-recommended')
     let spanCount = document.querySelectorAll('.count-main span')
     slideCount -= 1
     if (slideCount < 0) {
@@ -118,12 +118,12 @@ function createData() {
         let newSpanCount = document.createElement('span')
         document.querySelectorAll('.count-main')[0].appendChild(newSpanCount)
         let newCard = document.createElement('div')
-        newCard.classList = "card-main"
+        newCard.classList = "card-recommended"
         newCard.innerHTML = `
-            <div class="recomendados-image">
+            <div class="recommended-image">
                 <img src="${element.images.src1}" alt="">
             </div>
-            <div class="recomendados-data">
+            <div class="recommended-data">
                 <h2>${element.name}</h2>
                 <div class="mini-image">
                     <img src="${element.images.src2}" alt="">
@@ -135,8 +135,18 @@ function createData() {
                     <p>Já disponível</p>
                     <label>Popular</label>
                 </div>
-                <div class="recomendados-price">
-                    <p>R$ ${element.price},00</p>
+                <div class="recommended-price">
+                ${element.promo.type == true && element.promo.value > 0 ? 
+                    `
+                    <div class="promo">
+                        <p id="promoPerc">${element.promo.value}%</p>
+                        <div class="price">
+                            <p class="price-old">R$ ${element.price.toFixed(2)}</p>
+                            <p id="price-end">R$ ${(element.price - element.promo.value).toFixed(2)}</p>
+                        </div>
+                    </div>` : `<p>R$ ${element.price.toFixed(2)}</p>`
+                }
+                
                     <span>
                         <i class="fa-brands fa-windows"></i>
                         <i class="fa-brands fa-apple"></i>
@@ -148,7 +158,7 @@ function createData() {
         main.appendChild(newCard)
     });
 
-    let cardsMain = document.querySelectorAll('.card-main')
+    let cardsMain = document.querySelectorAll('.card-recommended')
     let spanCount = document.querySelectorAll('.count-main span')
     cardsMain[slideCount].style.display = 'flex'
     spanCount[slideCount].style.background = "#999"
