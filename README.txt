@@ -1,4 +1,4 @@
-# Projeto Steam Clone
+# Projeto Steam-WebSite
 
 ## Descrição
 
@@ -19,4 +19,4 @@ O projeto Steam Clone é uma aplicação desenvolvida com o objetivo de replicar
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/steam-clone.git
+git clone https://github.com/FbianoG/Steam-WebSite.git
