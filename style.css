@@ -105,6 +105,7 @@ header .menu span {
     height: 10px; 
     border-radius: 3px;  
     background: #707070;
+    cursor: pointer;
 }
 
 .slide .count-main span:hover {
@@ -296,13 +297,19 @@ header .menu span {
 }
 
 .recomends .main .destaques .recomendados {
+    height: 355px;
+    width: 100%;
+}
+
+.card-main {
     display: flex;
     background: #061018;
     color: #f4f5f9;
-    height: 355px;
+    height: 100%;
     width: 100%;
     cursor: pointer;
     box-shadow: 0 0 10px #100100;
+    display: none;
 }
 
 .recomends .main .destaques .recomendados-image {
@@ -327,6 +334,7 @@ header .menu span {
     padding: 30px 20px;
     font-weight: 200;
     font-size: 25px;
+    text-transform: capitalize;
 }
 
 .recomends .main .destaques .recomendados .recomendados-data .mini-image {
