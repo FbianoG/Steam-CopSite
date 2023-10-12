@@ -56,7 +56,7 @@ let videoApresentation = document.querySelectorAll('.apresentation video')[0]
 // console.log(apresentation);
 
 let mainImg = document.querySelectorAll('.recommended img')
-let main = document.querySelectorAll('.recommended')[0]
+let recommended = document.querySelectorAll('.recommended')[0]
 let nextBtn = document.querySelectorAll('.next')[0]
 let backBtn = document.querySelectorAll('.back')[0]
 
@@ -155,7 +155,7 @@ function createData() {
                 </div>
             </div>
         `
-        main.appendChild(newCard)
+        recommended.appendChild(newCard)
     });
 
     let cardsMain = document.querySelectorAll('.card-recommended')
