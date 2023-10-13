@@ -4,7 +4,7 @@ let games = [
         price: 60, //preço real do jogo
         main: true, //diz se o jogo está em destaque
         promo: {
-            type: true, //diz se o jogo está em promoção
+            type: false, //diz se o jogo está em promoção
             value: 10, //porcentagem do desconto da promoção
         },
         images: {
@@ -21,7 +21,7 @@ let games = [
         main: true,
         promo: {
             type: true,
-            value: 20,
+            value: 25,
         },
         images: {
             src1: "https://t2.tudocdn.net/671739?w=1920",
@@ -36,7 +36,7 @@ let games = [
         price: 79,
         main: true,
         promo: {
-            type: true,
+            type: false,
             value: 65,
         },
         images: {
@@ -52,8 +52,8 @@ let games = [
 
 
 //Variáveis
-let videoUrl = ""
-// let videoApresentation = document.querySelectorAll('.apresentation video')[0]
+let videoUrl = "https://cdn.akamai.steamstatic.com/steam/clusters/frontpage/b9470f369c925f8d28e3baeb/webm_page_bg_portuguese.webm?t=1696637517"
+let videoApresentation = document.querySelectorAll('.apresentation video')[0]
 let mainImg = document.querySelectorAll('.recommended img')
 let highList = document.querySelectorAll('.highlights-list')[0]
 let nextBtn = document.querySelectorAll('.next')[0]

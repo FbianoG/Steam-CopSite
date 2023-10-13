@@ -328,7 +328,6 @@ main {
 .highlights-card-data {
     border: 1px solid #202020;
     border-left: none;
-    padding: 0 10px;
 }
 
 .highlights-card-data h2 {
@@ -379,7 +378,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 20px;
+    padding: 0 10px;
     height: 35px;
 }
 
@@ -634,7 +633,23 @@ main {
     }
 
     .highlights-card-data h2 {
-        padding: 0 20px 5px;
+        padding: 0 10px 5px;
     }
 
+    .promotion-list {
+        display: flex;
+        overflow: auto;
+        width: 100%;
+    }
+
+    .promotion-card {
+        min-width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .promotion-card {
+        min-width: 90%;
+    }
 }
