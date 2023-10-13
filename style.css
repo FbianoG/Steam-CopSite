@@ -559,7 +559,9 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 150px;
 }
+
 .search-list-button {
     width: 230px;
     height: 60px;
@@ -572,13 +574,56 @@ main {
     letter-spacing: 1px;
     border: none;
     border-radius: 3px;
-    background: linear-gradient(to right, #06BFFF , #2D73FF );
+    background: linear-gradient(to right, #06BFFF, #2D73FF);
     box-shadow: 0 0 4px #000;
 }
 
 .search-list-button:hover {
     background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
     cursor: pointer;
+}
+
+
+footer {
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 200px;
+    /* padding: 10px 0; */
+    margin-bottom: 50px;
+}
+
+footer h1 {
+    font-size: 24px;
+    color: #67c1f5;
+    font-weight: normal;
+}
+
+footer p {
+    color: #999;
+    text-align: center;
+}
+
+footer button {
+    height: 30px;
+    width: 125px;
+    font-size: 15px;
+    color: #d2e885;
+    border: none;
+    border-radius: 2px;
+    background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+    cursor: pointer;
+}
+
+footer button:hover {
+    color: #fff ;
+    background: #97b30b;
+}
+
+footer b {
+    color: #fff;
 }
 
 
@@ -656,6 +701,7 @@ main {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
     }
+
     .search-list-button {
         width: 100%;
     }
