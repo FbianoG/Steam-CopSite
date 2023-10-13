@@ -316,7 +316,7 @@ main {
     height: 100%;
     /* min-width: 620px; */
     width: 100%;
-    min-width: 620px;
+    /* min-width: 620px; */
 }
 
 .highlights-card-image img {
@@ -326,9 +326,9 @@ main {
 }
 
 .highlights-card-data {
-    width: 100%;
     border: 1px solid #202020;
     border-left: none;
+    padding: 0 10px;
 }
 
 .highlights-card-data h2 {
@@ -589,7 +589,7 @@ main {
     .highlights-card {
         display: flex;
         flex-direction: column;
-        min-width: 100%;
+        min-width: 90%;
         overflow: hidden;
     }
 
@@ -627,6 +627,14 @@ main {
 }
 
 @media screen and (max-width: 660px) {
+    .highlights-list {
+        display: flex;
+        height: 365px;
+        overflow-x: auto;
+    }
 
+    .highlights-card-data h2 {
+        padding: 0 20px 5px;
+    }
 
 }
