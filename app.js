@@ -85,6 +85,7 @@ function slideNext() { //function para alterar o jogo em destaque
             spanCount[i].style.background = ""
         }
     }
+
 }
 
 function slideBack() { //function para alterar o jogo em destaque
@@ -157,6 +158,26 @@ function createData() {
     let spanCount = document.querySelectorAll('.highlights-slide-count span')
     highCard[slideCount].style.display = 'flex' //display=none nos jogos subsequente ao index "slideCount"
     spanCount[slideCount].style.background = "#999" //muda background do "span[0]"
+
+    showImgHoverMain()
+}
+
+
+function showImgHoverMain() {
+    let miniImg = document.querySelectorAll('.highlights-card-data-images img')
+    miniImg.forEach(element => {
+
+        element.addEventListener('mouseenter', () => {
+            let imgFather = element.parentElement.parentElement.parentElement
+            let imgMain = imgFather.querySelector('.highlights-card-image img')
+            let imgMainTemp = imgMain.src
+            imgMain.src = element.src
+            element.addEventListener('mouseleave', ()=>{
+                imgMain.src = imgMainTemp
+            })
+        })
+    });
+
 }
 
 

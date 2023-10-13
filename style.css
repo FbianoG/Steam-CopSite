@@ -193,7 +193,7 @@ main {
 }
 
 .menu-image img {
-    width: 100%;
+    width: 75%;
     height: 100%;
     object-fit: cover;
 }
@@ -329,10 +329,11 @@ main {
 .highlights-card-data {
     border: 1px solid #202020;
     border-left: none;
+    padding: 10px;
 }
 
 .highlights-card-data h2 {
-    padding: 20px;
+    padding: 20px 0;
     font-weight: 200;
     font-size: 25px;
     text-transform: capitalize;
@@ -358,7 +359,7 @@ main {
 }
 
 .highlights-card-data-labels {
-    padding: 10px 20px;
+    padding: 10px 0;
     margin-bottom: 15px;
 }
 
@@ -379,7 +380,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 10px;
     height: 35px;
 }
 
@@ -559,7 +559,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .search-list-button {
