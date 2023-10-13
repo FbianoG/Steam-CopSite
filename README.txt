@@ -10,7 +10,7 @@ O projeto Steam Clone é uma aplicação desenvolvida com o objetivo de replicar
 
 2. **Lista de Jogos Dinâmica**: A lista de jogos exibida na página é gerada dinamicamente a partir de um array de objetos em JavaScript. Isso permite que você adicione, remova ou atualize jogos facilmente, tornando o projeto flexível e expansível.
 
-3. **Responsividade**: O projeto é totalmente responsivo, ajustando-se de forma adequada a diferentes tamanhos de tela. Isso garante que os usuários tenham uma experiência consistente, independentemente do dispositivo que estão usando. (a desenvolver)
+3. **Responsividade**: O projeto é totalmente responsivo, ajustando-se de forma adequada a diferentes tamanhos de tela. Isso garante que os usuários tenham uma experiência consistente, independentemente do dispositivo que estão usando.
 
 4. **Customização Simples**: A personalização do conteúdo da página é simples e direta. Você pode modificar o array de objetos de jogos no arquivo JavaScript para atualizar o catálogo de jogos.
 
