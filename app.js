@@ -52,8 +52,8 @@ let games = [
 
 
 //Variáveis
-let videoUrl = "https://cdn.akamai.steamstatic.com/steam/clusters/frontpage/b9470f369c925f8d28e3baeb/webm_page_bg_portuguese.webm?t=1696637517"
-let videoApresentation = document.querySelectorAll('.apresentation video')[0]
+let videoUrl = ""
+// let videoApresentation = document.querySelectorAll('.apresentation video')[0]
 let mainImg = document.querySelectorAll('.recommended img')
 let highList = document.querySelectorAll('.highlights-list')[0]
 let nextBtn = document.querySelectorAll('.next')[0]
