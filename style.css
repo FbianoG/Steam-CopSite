@@ -679,7 +679,7 @@ footer b {
     }
 
     .highlights-card-data h2 {
-        padding: 10px 20px 5px;
+        padding: 0 20px 5px;
     }
 
     .highlights-card-data-images {
@@ -688,6 +688,11 @@ footer b {
 
     .highlights-card-data-labels {
         display: none;
+    }
+
+    .highlights-card-data-price {
+        padding: 10px 20px 5px;
+        align-items: center;
     }
 
     .highlights-slide {
@@ -720,8 +725,16 @@ footer b {
         overflow-x: auto;
     }
 
+    .highlights-card-data {
+        padding: 0;
+    } 
+
     .highlights-card-data h2 {
-        padding: 0 10px 5px;
+        padding: 0 10px;
+    }
+
+    .highlights-card-data-price {
+        padding: 5px 10px 5px;
     }
 
     .promotion-list {
