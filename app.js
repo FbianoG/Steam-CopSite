@@ -42,13 +42,13 @@ let games = [
         images: {
             src1: "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70070000016597/4dc8ab1f09ced6fb2953b2caedd978c1f23df33b62305bcf3140308962073d57",
             src2: "https://img.olhardigital.com.br/wp-content/uploads/2022/12/minecraft-3.jpg",
-            src3: "https://files.tecnoblog.net/wp-content/uploads/2021/07/new-world-2.jpg",
+            src3: "https://t2.tudocdn.net/567964?w=1920",
             src4: "https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2016/12/16/1331835109442_2/sua-imagina%C3%A7%C3%A3o-%C3%A9-o-limite.png",
             src5: "https://img-4.linternaute.com/cw-e0GCWnfHXM0GzcpPvQa2Uv3U=/1500x/smart/7416fed8d73a4d80858542654cda9573/ccmcms-linternaute/43511227.png",
         }
     },
     {
-        name: "minecraft",
+        name: "new world",
         price: 79,
         main: true,
         promo: {
@@ -173,7 +173,7 @@ function createData() {
     let highCard = document.querySelectorAll('.highlights-card')
     let spanCount = document.querySelectorAll('.highlights-slide-count span')
     highCard[slideCount].style.display = 'flex' //display=none nos jogos subsequente ao index "slideCount"
-    spanCount[slideCount].style.background = "#999" //muda background do "span[0]"
+    spanCount[slideCount].style.background = "#999" //muda a cor do "span[0]"
 
     showImgHoverMain()
 }
