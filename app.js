@@ -32,7 +32,23 @@ let games = [
         }
     },
     {
-        name: "new world",
+        name: "minicraft",
+        price: 59,
+        main: true,
+        promo: {
+            type: true,
+            value: 50,
+        },
+        images: {
+            src1: "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70070000016597/4dc8ab1f09ced6fb2953b2caedd978c1f23df33b62305bcf3140308962073d57",
+            src2: "https://img.olhardigital.com.br/wp-content/uploads/2022/12/minecraft-3.jpg",
+            src3: "https://files.tecnoblog.net/wp-content/uploads/2021/07/new-world-2.jpg",
+            src4: "https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2016/12/16/1331835109442_2/sua-imagina%C3%A7%C3%A3o-%C3%A9-o-limite.png",
+            src5: "https://img-4.linternaute.com/cw-e0GCWnfHXM0GzcpPvQa2Uv3U=/1500x/smart/7416fed8d73a4d80858542654cda9573/ccmcms-linternaute/43511227.png",
+        }
+    },
+    {
+        name: "minecraft",
         price: 79,
         main: true,
         promo: {
@@ -133,17 +149,17 @@ function createData() {
                     <label>Popular</label>
                 </div>
                 <div class="highlights-card-data-price">
-                    ${element.promo.type == true && element.promo.value > 0 ? //operador ternário para verificar se o jogo está ou não em promoção
+                    ${element.promo.type == true && element.promo.value > 0 ? //operador ternário para verificar se o jogo está ou não em promoção // faz o cálculo (preçoReal - (preçoReal * (desconto / 100)))
                 `
                         <div class="highlights-card-data-price-promo">
                             <p id="promoPerc">${element.promo.value}%</p>
                             <div class="highlights-card-data-price-promo-price">
                                 <p class="price-old">R$ ${element.price.toFixed(2)}</p>
-                                <p id="price-end">R$ ${(element.price - element.promo.value).toFixed(2)}</p>
+                                <p id="price-end">R$ ${(element.price -(element.price * (element.promo.value / 100))).toFixed(2)}</p> 
                             </div>
                         </div>` : `<p>R$ ${element.price.toFixed(2)}</p>
                         `
-            }
+            }              
                     <span>
                         <i class="fa-brands fa-windows"></i>
                         <i class="fa-brands fa-apple"></i>
@@ -166,7 +182,6 @@ function createData() {
 function showImgHoverMain() {
     let miniImg = document.querySelectorAll('.highlights-card-data-images img')
     miniImg.forEach(element => {
-
         element.addEventListener('mouseenter', () => {
             let imgFather = element.parentElement.parentElement.parentElement
             let imgMain = imgFather.querySelector('.highlights-card-image img')
